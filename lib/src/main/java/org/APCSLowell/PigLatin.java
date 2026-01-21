@@ -15,17 +15,17 @@ public class PigLatin {
         //precondition: sWord is a valid String of length greater than 0
         //postcondition: returns the pig latin equivalent of sWord
         if(findFirstVowel(w)==-1){
-            return string +"ay";
+            return w +"ay";
         }
         if(findFirstVowel(w)==0){
-            return string +"way";
+            return w +"way";
         }
         if(w.substring(0,2).equals("qu")){
             return w.substring(2,w.length())+"quay";
 
         }
         if(findFirstVowel(w)>0){
-            return str.substring(i,w.length())+str.substring(0,i)+"ay";
+            return w.substring(findFirstVowel(w),w.length())+w.substring(0,findFirstVowel(w))+"ay";
         }
         return null;
     }
